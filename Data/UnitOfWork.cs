@@ -6,10 +6,10 @@ namespace PlatformService.Data
         private readonly AppDbContext _context;
         public IPlatformRepository PlatformRepository { get; private set; }
 
-        public UnitOfWork(AppDbContext context, PlatformRepository platformRepository)
+        public UnitOfWork(AppDbContext context )
         {
             _context = context;
-            PlatformRepository = platformRepository;   
+            PlatformRepository = new PlatformRepository(_context);   
         }
 
         public int Commit()
