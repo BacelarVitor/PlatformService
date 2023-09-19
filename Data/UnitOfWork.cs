@@ -12,12 +12,12 @@ namespace PlatformService.Data
             PlatformRepository = platformRepository;   
         }
 
-        public int Complete()
+        public int Commit()
         {
             return _context.SaveChanges();
         }
 
-        public async Task<int> CompleteAsync()
+        public async Task<int> CommitAsync()
         {
             return await _context.SaveChangesAsync();
         }
