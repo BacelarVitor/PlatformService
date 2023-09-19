@@ -25,6 +25,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+PrepareDb.PreparePopulation(app);
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
