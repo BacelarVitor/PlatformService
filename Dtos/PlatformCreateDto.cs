@@ -4,7 +4,7 @@ namespace PlatformService.Dtos
 {
     public class PlatformCreateDto 
     {
-        public Guid Id { get;  set; }
+        public Guid Id { get;  private set; }
 
         [Required]
         public string Name { get; private set; }
