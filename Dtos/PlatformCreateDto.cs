@@ -16,7 +16,7 @@ namespace PlatformService.Dtos
         public string CostType { get; private set; }
         public PlatformCreateDto(string name, string publisher, string costType)
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             Name = name;
             Publisher = publisher;
             CostType = costType;
