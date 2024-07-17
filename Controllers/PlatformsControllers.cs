@@ -45,7 +45,7 @@ namespace PlatformService.Controllers
             await _unitOfWork.CommitAsync();
 
             var platformReadDto = _mapper.Map<PlatformReadDto>(platformModel);
-            return CreatedAtRoute(nameof(GetPlatformById), new { Id = platformReadDto.Id }, platformReadDto);
+            return CreatedAtRoute(nameof(GetPlatformById), new { platformReadDto.Id }, platformReadDto);
         }
     }
 }
